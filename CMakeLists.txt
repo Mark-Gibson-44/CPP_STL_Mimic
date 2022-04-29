@@ -4,7 +4,7 @@ project(STL_ATTEMPT)
 
 
 #add_subdirectory(Tests)
-add_executable(STL main.cpp vec.h)
+add_executable(STL main.cpp vec.h list.h)
 
 
 #set(THREADS_PREFER_PTHREAD_FLAG ON)

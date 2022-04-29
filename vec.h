@@ -69,7 +69,13 @@ public:
 	}
 	int get_size()const { return size;}
 	
+	void for_each(auto func) {
+		
 
+		for(auto a = this->begin(); a != this->end(); a++){
+			func(*a);
+		}
+	}
 
 	//Iterator
 	struct Iterator{
@@ -95,7 +101,7 @@ public:
 	private:
 		T* ptr;
 	};
-
+	
 	struct Reverse_Iterator{
 		using iterator_category = std::bidirectional_iterator_tag;
 		using difference_type = std::ptrdiff_t;

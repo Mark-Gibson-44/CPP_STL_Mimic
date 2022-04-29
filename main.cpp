@@ -1,5 +1,5 @@
 #include "vec.h"
-
+#include "list.h"
 
 int main(){
 
@@ -11,10 +11,11 @@ int main(){
 
 	auto start = v2.rbegin();
 
-	std::cout << "Forwards:\n";
-	for(auto a: v2)
+	//std::cout << "Forwards:\n";
+	/*for(auto a: v2)
 		std::cout << a  << "\n";
 	std::cout << "Backwards:\n";
+
 
 
 
@@ -22,5 +23,20 @@ int main(){
 		std::cout << *start << '\n';
 		start++;
 	}
+
+
+	List<int> l1(1);
+	l1.append(3);
+
+	l1.emplace(new List<int>(5));
+	*/
+
+
+	auto func = [](auto& a){ a *= 2; };
+
+	v2.for_each(func);
+
+	for(auto& a: v2)
+		std::cout << a << '\n';
 	return 0;
 }
